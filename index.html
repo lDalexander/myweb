@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>El Pike de mi Abuela</title>
+    <meta name="description"
+        content="Redescubre la tradición colombiana con el toque mágico de antaño. Salchipapas, empanadas y champús preparados con amor y herencia familiar.">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300&family=Poppins:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet">
+
+    <!-- AOS CSS for animations -->
+    <link href="./assets/css/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="./assets/css/styles.css" rel="stylesheet">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-smooth-scroll="true" tabindex="0">
+
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="#home">
+                <span class="material-symbols-outlined fs-2">restaurant_menu</span>
+                <span>El Pike de mi Abuela</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="material-symbols-outlined text-primary">menu</span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul
+                    class="navbar-nav mx-auto mb-2 mb-lg-0 py-2 py-lg-0 px-3 px-lg-0 bg-white bg-opacity-50 rounded-pill border border-light shadow-sm">
+                    <li class="nav-item"><a class="nav-link px-4" href="#home">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link px-4" href="#historia">Historia</a></li>
+                    <li class="nav-item"><a class="nav-link px-4" href="#menu">Nuestro Menú</a></li>
+                    <li class="nav-item"><a class="nav-link px-4" href="#testimonios">Reseñas</a></li>
+                </ul>
+                <div class="d-flex">
+                    <a href="#reservas" class="btn btn-custom-primary d-flex align-items-center gap-2">
+                        <span class="material-symbols-outlined fs-5">shopping_bag</span> Pedir
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container-fluid px-0 h-100">
+            <div class="row g-0 h-100 align-items-center">
+                <div class="col-lg-6 px-4 px-sm-5 py-5 text-center text-lg-start z-1" data-aos="fade-right"
+                    data-aos-duration="1000">
+                    <div
+                        class="badge bg-danger bg-opacity-10 text-primary rounded-pill px-3 py-2 mb-4 d-inline-flex align-items-center gap-2">
+                        <span class="material-symbols-outlined fs-6">local_fire_department</span> Recetas de 1974
+                    </div>
+                    <h1 class="display-3 font-display fw-bold mb-3">
+                        <span class="d-block text-dark">El Secreto está en el</span>
+                        <span class="d-block text-primary">Pike Ancestral</span>
+                    </h1>
+                    <p class="lead text-muted mb-5 col-lg-10 mx-auto mx-lg-0">
+                        Redescubre la tradición colombiana con el toque mágico de antaño. Salchipapas, empanadas y
+                        champús preparados con puro amor y herencia familiar.
+                    </p>
+                    <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-lg-start gap-3">
+                        <a href="#menu" class="btn btn-custom-primary">Explorar Menú</a>
+                        <a href="#historia" class="btn btn-custom-outline">Nuestra Historia</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 h-100 hero-image-container d-none d-lg-block" data-aos="fade-left"
+                    data-aos-duration="1200">
+                    <img src="./assets/images/hero-monster.jpg"
+                        alt="La Salchipapa Legendaria de la Abuela con harto queso y salsas caseras" class="hero-image">
+                    <div class="hero-badge d-flex align-items-center gap-3">
+                        <div class="bg-secondary text-white rounded-circle p-2 shadow-sm d-flex align-items-center">
+                            <span class="material-symbols-outlined">star</span>
+                        </div>
+                        <div>
+                            <small class="text-uppercase fw-bold text-muted" style="font-size: 0.7rem;">Plato
+                                Estrella</small>
+                            <div class="font-display fw-bold text-dark">La Legendaria</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Strip -->
+    <div class="bg-primary text-white py-4 position-relative z-2 shadow"
+        style="border-bottom: 4px solid var(--color-secondary);">
+        <div class="container">
+            <div class="row text-center row-cols-1 row-cols-md-3 g-4">
+                <div class="col" data-aos="zoom-in" data-aos-delay="100">
+                    <a href="#menu"
+                        class="text-white text-decoration-none d-flex flex-column align-items-center p-3 rounded hover-overlay"
+                        onclick="filterMenu('.salchipapa')">
+                        <span class="material-symbols-outlined text-secondary fs-1 mb-2">restaurant</span>
+                        <span class="font-display fw-bold fs-5">Salchipapas Especiales</span>
+                    </a>
+                </div>
+                <div class="col" data-aos="zoom-in" data-aos-delay="200">
+                    <a href="#menu"
+                        class="text-white text-decoration-none d-flex flex-column align-items-center p-3 rounded"
+                        onclick="filterMenu('.empanada')">
+                        <span class="material-symbols-outlined text-secondary fs-1 mb-2">lunch_dining</span>
+                        <span class="font-display fw-bold fs-5">Empanadas Crujientes</span>
+                    </a>
+                </div>
+                <div class="col" data-aos="zoom-in" data-aos-delay="300">
+                    <a href="#menu"
+                        class="text-white text-decoration-none d-flex flex-column align-items-center p-3 rounded"
+                        onclick="filterMenu('.bebida')">
+                        <span class="material-symbols-outlined text-secondary fs-1 mb-2">local_bar</span>
+                        <span class="font-display fw-bold fs-5">Champús Helados</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- History / Legacy -->
+    <section id="historia" class="py-5" style="background-color: #fcfbf5;">
+        <div class="container py-5">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <p class="text-secondary fw-bold text-uppercase tracking-wider mb-2"><span
+                        class="material-symbols-outlined fs-6">auto_stories</span> Nuestro Legado</p>
+                <h2 class="display-4 font-display fw-bold">La Leyenda del Sabor</h2>
+                <p class="lead text-muted col-md-8 mx-auto">Más de medio siglo manteniendo viva la chispa del auténtico
+                    sabor de barrio.</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item left" data-aos="fade-right">
+                    <div class="timeline-dot">74'</div>
+                    <div class="timeline-content">
+                        <h4 class="font-display fw-bold">La Primera Carpa</h4>
+                        <p class="text-muted mb-0">Todo comenzó en la esquina de la Calle 9. La Abuela puso una olla
+                            prestada, una pequeña carpa verde y ganas de alimentar a la familia. Ese día nació el
+                            verdadero Pike.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right" data-aos="fade-left">
+                    <div class="timeline-dot" style="background-color: var(--color-secondary);">89'</div>
+                    <div class="timeline-content">
+                        <h4 class="font-display fw-bold">El Ají Secreto</h4>
+                        <p class="text-muted mb-0">Los vecinos empezaron a hacer fila desde la madrugada, enamorados de
+                            un ají misterioso con 12 especias que la Abuela machacaba a mano. Nunca se ha revelado la
+                            receta.</p>
+                    </div>
+                </div>
+                <div class="timeline-item left" data-aos="fade-right">
+                    <div class="timeline-dot">05'</div>
+                    <div class="timeline-content">
+                        <h4 class="font-display fw-bold">Pasando el Fogón</h4>
+                        <p class="text-muted mb-0">La tercera generación asumió el legado. Modernizamos la carpa, pero
+                            prometimos jamás cambiar de proveedor de papa criolla ni de masa curada.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Grid -->
+    <section id="menu" class="py-5 bg-white">
+        <div class="container py-5">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <p class="text-secondary fw-bold text-uppercase tracking-wider mb-2"><span
+                        class="material-symbols-outlined fs-6">local_dining</span> Nuestro Menú</p>
+                <h2 class="display-4 font-display fw-bold">Descubre los Pikes</h2>
+            </div>
+
+            <!-- Filters -->
+            <div class="text-center mb-5 filter-button-group" data-aos="fade-up" data-aos-delay="100">
+                <button class="btn active" data-filter="*">Todas las Delicias</button>
+                <button class="btn" data-filter=".salchipapa"><span
+                        class="material-symbols-outlined fs-6">restaurant</span> Salchipapas</button>
+                <button class="btn" data-filter=".empanada"><span
+                        class="material-symbols-outlined fs-6">lunch_dining</span> Empanadas</button>
+                <button class="btn" data-filter=".bebida"><span class="material-symbols-outlined fs-6">local_bar</span>
+                    Bebidas</button>
+            </div>
+
+            <!-- Grid -->
+            <div class="row g-4 grid-menu">
+                <!-- Item 1 -->
+                <div class="col-md-6 col-lg-4 grid-item salchipapa" data-aos="fade-up" data-aos-delay="100">
+                    <div class="menu-card d-flex flex-column h-100">
+                        <div class="menu-card-img-wrap">
+                            <span class="price-badge">$18.000</span>
+                            <span class="fav-badge">Favorito</span>
+                            <img src="./assets/images/salchipapa-clasica.jpg" alt="Salchipapa Legendaria">
+                        </div>
+                        <div class="p-4 d-flex flex-column flex-grow-1">
+                            <small
+                                class="text-muted fw-bold text-uppercase pb-1 border-bottom d-inline-block mb-2 w-auto">Salchipapas</small>
+                            <h4 class="font-display fw-bold text-dark mt-2">Salchipapa Legendaria</h4>
+                            <p class="text-muted flex-grow-1">Papas criollas doradas, salchicha premium, queso costeño
+                                rallado y la salsa rosada secreta.</p>
+                            <button
+                                class="btn btn-outline-danger rounded-pill w-100 mt-3 fw-bold d-flex justify-content-center align-items-center gap-2"
+                                onclick="pedirDirecto('Salchipapa Legendaria')">
+                                <span class="material-symbols-outlined fs-5">shopping_cart</span> Añadir al Pedido
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="col-md-6 col-lg-4 grid-item salchipapa" data-aos="fade-up" data-aos-delay="200">
+                    <div class="menu-card d-flex flex-column h-100">
+                        <div class="menu-card-img-wrap">
+                            <span class="price-badge">$25.000</span>
+                            <img src="./assets/images/hero-monster.jpg" alt="Pike Monster">
+                        </div>
+                        <div class="p-4 d-flex flex-column flex-grow-1">
+                            <small
+                                class="text-muted fw-bold text-uppercase pb-1 border-bottom d-inline-block mb-2 w-auto">Salchipapas</small>
+                            <h4 class="font-display fw-bold text-dark mt-2">Pike Monster</h4>
+                            <p class="text-muted flex-grow-1">Doble porción de papa, chorizo, pollo desmechado, tocineta
+                                y nuestro ají de lulo.</p>
+                            <button
+                                class="btn btn-outline-danger rounded-pill w-100 mt-3 fw-bold d-flex justify-content-center align-items-center gap-2"
+                                onclick="pedirDirecto('Pike Monster')">
+                                <span class="material-symbols-outlined fs-5">shopping_cart</span> Añadir al Pedido
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="col-md-6 col-lg-4 grid-item empanada" data-aos="fade-up" data-aos-delay="300">
+                    <div class="menu-card d-flex flex-column h-100">
+                        <div class="menu-card-img-wrap">
+                            <span class="price-badge">$10.000</span>
+                            <span class="fav-badge">x5 Unidades</span>
+                            <img src="./assets/images/empanadas.jpg" alt="Empanadas Clásicas">
+                        </div>
+                        <div class="p-4 d-flex flex-column flex-grow-1">
+                            <small
+                                class="text-muted fw-bold text-uppercase pb-1 border-bottom d-inline-block mb-2 w-auto">Empanadas</small>
+                            <h4 class="font-display fw-bold text-dark mt-2">Empanadas de Iglesia</h4>
+                            <p class="text-muted flex-grow-1">Masa de maíz añejo crocante, rellenas de guiso de carne de
+                                res tradicional.</p>
+                            <button
+                                class="btn btn-outline-danger rounded-pill w-100 mt-3 fw-bold d-flex justify-content-center align-items-center gap-2"
+                                onclick="pedirDirecto('Empanadas 5x')">
+                                <span class="material-symbols-outlined fs-5">shopping_cart</span> Añadir al Pedido
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="col-md-6 col-lg-4 grid-item bebida" data-aos="fade-up" data-aos-delay="400">
+                    <div class="menu-card d-flex flex-column h-100">
+                        <div class="menu-card-img-wrap">
+                            <span class="price-badge">$6.000</span>
+                            <img src="./assets/images/champus.jpg" alt="Champus">
+                        </div>
+                        <div class="p-4 d-flex flex-column flex-grow-1">
+                            <small
+                                class="text-muted fw-bold text-uppercase pb-1 border-bottom d-inline-block mb-2 w-auto">Bebidas</small>
+                            <h4 class="font-display fw-bold text-dark mt-2">Champús Valluno</h4>
+                            <p class="text-muted flex-grow-1">Refrescante bebida ancestral con lulo, piña, maíz tierno y
+                                el toque dulce de panela.</p>
+                            <button
+                                class="btn btn-outline-danger rounded-pill w-100 mt-3 fw-bold d-flex justify-content-center align-items-center gap-2"
+                                onclick="pedirDirecto('Champus')">
+                                <span class="material-symbols-outlined fs-5">shopping_cart</span> Añadir al Pedido
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonios" class="py-5" style="background-color: #fcfbf5;">
+        <div class="container py-5">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <p class="text-secondary fw-bold text-uppercase tracking-wider mb-2"><span
+                        class="material-symbols-outlined fs-6">reviews</span> Lo que dicen</p>
+                <h2 class="display-4 font-display fw-bold">El Barrio Respalda</h2>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6 col-lg-4" data-aos="flip-up" data-aos-delay="100">
+                    <div class="testimonial-card">
+                        <div class="quote-icon"><span class="material-symbols-outlined">format_quote</span></div>
+                        <div class="stars mb-3 fs-5">★★★★★</div>
+                        <p class="fst-italic text-muted">"Llevo 20 años viniendo a comer después del partido de los
+                            domingos. Si el Pike dejara de existir, me cambiaría de ciudad."</p>
+                        <hr>
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center font-display fs-5"
+                                style="width: 45px; height: 45px;">C</div>
+                            <div>
+                                <h6 class="mb-0 fw-bold">Carlos Ramírez</h6>
+                                <small class="text-muted">Cliente Fiel desde 2004</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="flip-up" data-aos-delay="200">
+                    <div class="testimonial-card"
+                        style="transform: translateY(-10px); border: 2px solid rgba(192,57,43,0.1);">
+                        <div class="quote-icon" style="background-color: var(--color-primary);"><span
+                                class="material-symbols-outlined">format_quote</span></div>
+                        <div class="stars mb-3 fs-5">★★★★★</div>
+                        <p class="fst-italic text-muted">"El champús de este sitio debería ser patrimonio nacional. Y
+                            las empanadas... ufff, el ají tiene el mismo sabor que de hace 10 años."</p>
+                        <hr>
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="bg-secondary text-white rounded-circle d-flex align-items-center justify-content-center font-display fs-5"
+                                style="width: 45px; height: 45px;">L</div>
+                            <div>
+                                <h6 class="mb-0 fw-bold">Laura V.</h6>
+                                <small class="text-muted">Vecina de la cuadra</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order CTA -->
+    <section id="reservas" class="cta-section py-5">
+        <!-- Decoration SVG -->
+        <div class="position-absolute top-0 end-0 opacity-25 w-50 h-100 d-none d-lg-block"
+            style="background-image: radial-gradient(white 1px, transparent 1px); background-size: 20px 20px;"></div>
+
+        <div class="container py-5 position-relative z-1">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-lg-5 mb-5 mb-lg-0 text-center text-lg-start" data-aos="fade-right">
+                    <h2 class="display-5 font-display fw-bold mb-4">¿Antojo de Pike?</h2>
+                    <p class="lead mb-4 opacity-75">No importa la ocasión, nos aseguraremos de que tu pedido llegue
+                        intacto y calientito. Directo al WhatsApp, sin intermediarios.</p>
+                    <ul class="list-unstyled text-start d-inline-block mx-auto mx-lg-0">
+                        <li class="mb-3 d-flex align-items-center gap-3"><span
+                                class="bg-white text-primary rounded-circle p-1 material-symbols-outlined fs-5">check</span>
+                            Envío express en la zona Sur</li>
+                        <li class="mb-3 d-flex align-items-center gap-3"><span
+                                class="bg-white text-primary rounded-circle p-1 material-symbols-outlined fs-5">check</span>
+                            Pagos por transferencia o efectivo</li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="card border-0 shadow-lg rounded-4 p-4 p-md-5 text-dark">
+                        <h4 class="font-display fw-bold mb-4">Completa tu Orden</h4>
+                        <form id="orderForm" onsubmit="prepararPedido(event)">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label text-muted small fw-bold">Nombre Completo</label>
+                                    <input type="text" class="form-control bg-light" id="orderNombre" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label text-muted small fw-bold">Celular</label>
+                                    <input type="tel" class="form-control bg-light" id="orderTel" required
+                                        pattern="[0-9]{10}">
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label text-muted small fw-bold">Tipo de Pedido</label>
+                                    <select class="form-select bg-light" id="orderTipo" onchange="toggleDireccion()"
+                                        required>
+                                        <option value="domicilio">A Domicilio (Envío +$3.000)</option>
+                                        <option value="recoger">Recoger en el Local</option>
+                                    </select>
+                                </div>
+                                <div class="col-12" id="divDireccion">
+                                    <label class="form-label text-muted small fw-bold">Dirección de Entrega</label>
+                                    <input type="text" class="form-control bg-light" id="orderDir" required>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label text-muted small fw-bold">¿Qué te preparamos? (Opcional si
+                                        ya elegiste del menú)</label>
+                                    <textarea class="form-control bg-light" id="orderDetalles" rows="2"
+                                        placeholder="Ej: 2 Salchipapas clásicas y 1 Champús..."></textarea>
+                                </div>
+                                <div class="col-12 mt-4">
+                                    <button type="submit"
+                                        class="btn btn-custom-primary w-100 py-3 fs-5 d-flex align-items-center justify-content-center gap-2"
+                                        id="btnSubmit">
+                                        Continuar a WhatsApp <img
+                                            src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+                                            style="width:20px; filter:brightness(0) invert(1);">
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5">
+        <div class="container py-4">
+            <div class="row g-4">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <a class="d-flex align-items-center gap-2 text-white text-decoration-none mb-4" href="#">
+                        <span class="material-symbols-outlined text-secondary fs-2">restaurant_menu</span>
+                        <span class="font-display fw-bold fs-4">El Pike de mi Abuela</span>
+                    </a>
+                    <p class="small text-white-50 lh-lg">Llevando el sabor tradicional de la calle a tu mesa con la
+                        calidad, el cariño de siempre y el toque secreto de la abuela desde 1974.</p>
+                </div>
+                <div class="col-lg-2 offset-lg-2 col-md-6 mb-4 mb-md-0">
+                    <h6 class="text-uppercase text-secondary fw-bold mb-4 tracking-wider">Navegación</h6>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><a href="#home">Inicio</a></li>
+                        <li class="mb-2"><a href="#historia">Historia</a></li>
+                        <li class="mb-2"><a href="#menu">Nuestro Menú</a></li>
+                        <li class="mb-2"><a href="#testimonios">Reseñas</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h6 class="text-uppercase text-secondary fw-bold mb-4 tracking-wider">Encuéntranos</h6>
+                    <p class="small text-white-50 mb-2"><span
+                            class="material-symbols-outlined fs-6 text-secondary me-2">location_on</span> Calle 9 con
+                        Carrera 50, Barrio La Selva, Cali</p>
+                    <p class="small text-white-50 mb-2"><span
+                            class="material-symbols-outlined fs-6 text-secondary me-2">schedule</span> Mar-Dom: 5:00 PM
+                        - 11:00 PM</p>
+                    <p class="small text-white-50 mb-4"><span
+                            class="material-symbols-outlined fs-6 text-secondary me-2">payments</span> Efectivo y Nequi
+                    </p>
+                    <div class="d-flex gap-3">
+                        <a href="#"
+                            class="bg-white bg-opacity-10 rounded-circle p-2 d-flex align-items-center justify-content-center"
+                            style="width:40px;height:40px;"><svg width="20" height="20" fill="currentColor"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z">
+                                </path>
+                            </svg></a>
+                        <a href="#"
+                            class="bg-white bg-opacity-10 rounded-circle p-2 d-flex align-items-center justify-content-center"
+                            style="width:40px;height:40px;"><svg width="20" height="20" fill="currentColor"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772 4.902 4.902 0 011.772-1.153c.636-.247 1.363-.416 2.427-.465 1.067-.047 1.409-.06 3.809-.06h.63zm1.418 2.003l-.01 5.517-5.517.01-.01-5.517 5.537-.01zm-5.537 0a6.905 6.905 0 00-6.905 6.905c0 3.812 3.093 6.905 6.905 6.905s6.905-3.093 6.905-6.905c0-3.812-3.093-6.905-6.905-6.905z">
+                                </path>
+                            </svg></a>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="border-top border-secondary border-opacity-25 mt-5 pt-4 d-flex justify-content-between align-items-center">
+                <small class="text-white-50">&copy; <span id="year"></span> El Pike de mi Abuela. Todos los derechos
+                    reservados.</small>
+                <small class="text-white-50">Hecho con <span class="text-primary material-symbols-outlined"
+                        style="font-size: 14px;">favorite</span> en Colombia</small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- Bootstrap JS -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+    <!-- jQuery and Isotope for filtering -->
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/isotope.pkgd.min.js"></script>
+
+    <!-- AOS for scroll animations -->
+    <script src="./assets/js/aos.js"></script>
+
+    <!-- Custom JS -->
+    <script src="./assets/js/scripts.js"></script>
+</body>
+
+</html>
